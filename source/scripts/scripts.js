@@ -2,14 +2,19 @@
 
 $(document).ready(function() {
 	
+    // троеточие
     $(".reviews__text").dotdotdot({
 
     });
 
+    // скролл
     $('#fullpage').fullpage({
         anchors: ['section_burger', 'section_advantages', 'section_reviews', 'section_slider', 'section_team', 'section_menu', 'section_order', 'section_map'],
         menu: '#myMenu'
     });
+
+    // млайдер
+    $('.slider__list').slick();
     
 
     // карта 

@@ -117,3 +117,13 @@
 .slick-arrow.slick-hidden {
     display: none;
 }
+
+
+/*мои правки*/
+.slick-initialized .slick-slide {
+    display: flex;
+}
+
+.slick-slider .slick-track, .slick-slider .slick-list {
+    height: 100%;
+}
