@@ -1,0 +1,75 @@
+.composition {
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+	&__wrap {
+		display: flex;
+		-webkit-justify-content: flex-start; 
+		align-items: flex-start; 
+		cursor: pointer;
+		
+		&:hover {
+			.composition__drop {
+				top: 0;
+				opacity: 1; 
+			}
+		}
+	}
+	
+	&__btn {
+		display: flex;
+		flex-direction: column; 
+		justify-content: center; 
+		align-items: center; 
+		background-color: rgba(227, 80, 40, 0.4);
+		border-radius: 5px; 
+		padding: 10px;
+		width: 90px;
+		height: 90px;
+		
+		.icon {
+			font-size: 30px;
+		}
+
+	}
+
+	&__text {
+		font-family: 'Gagalin-Regular';
+		font-size: rem(14px);
+		color: #fff;
+	}
+
+	&__drop {
+		position: absolute;
+		left: 90px; 
+		background-color: rgba(255, 255, 255, 0.9);
+		border-radius: 5px;
+		padding:  20px;
+		top: -1000px;
+		opacity: 0; 
+		transition: opacity 1.3s;
+	}
+
+	&__table-td {
+		font-size: rem(14px);
+		font-family: 'Ubuntu-Medium';
+		color: $black;
+		text-align: left;
+		padding: 10px;
+		
+		.icon {
+			font-size: 30px;
+		}
+	}
+	
+	&__table-tr .composition__table-td:first-child {
+		text-align: center;
+	}
+
+	&__table-tr .composition__table-td:last-child {
+		text-align: right;
+	}
+}
+
+

@@ -1,0 +1,49 @@
+.navigation {
+	position: fixed;
+	top: 72px;
+	right: 2vw;
+	width: 50px;
+	z-index: 1000;
+	
+	&__link  {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 21px;
+
+		&:after,
+		&:before {
+			content: '';
+			position: absolute;
+			display: block;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			border-radius: 50%;
+		}
+
+		&:after {
+			width: 6px;
+			height: 6px;
+			background-color: #fff; 
+		}
+
+		&:before {
+			width: 0px;
+			height: 0px;
+			background-color: transparent; 
+			border: 1px solid #fff;
+			transition: 0.3s;
+		}
+
+		&_active,
+		&:hover {
+			&:before {
+				width: 16px;
+				height: 16px;
+			}
+		}
+	}
+}
+
+

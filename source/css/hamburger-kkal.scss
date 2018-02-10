@@ -1,0 +1,39 @@
+.hamburger-kkal {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 60px;
+	padding-top: 30px;
+	opacity: 0.5;
+	
+
+	.icon {
+		position: absolute;
+		display: inline-block;
+		top: 0;
+		left: 0;
+		font-size: 60px;
+	} 
+
+	&__num {
+		position: relative;
+		font-family: 'Gagalin-Regular';
+		color: #fff;
+		font-size: 20px;
+		margin-bottom: 10px;
+	}
+
+	&__text {
+		position: relative;
+		font-family: 'Gagalin-Regular';
+		color: #fff;
+		font-size: 14px;
+	}
+
+	@include tablets() { 
+		left: auto;
+		bottom: auto;
+		right: 0;
+		top: 0; 
+	}
+}

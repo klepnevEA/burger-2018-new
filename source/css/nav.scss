@@ -1,0 +1,54 @@
+.nav {
+	margin-left: auto;
+	display: flex;
+	align-items: stretch;
+	margin-right: 16px;
+	
+	&__list {
+		display: flex;
+		justify-content: flex-end;
+		align-items: stretch;
+	}
+
+	&__elem {
+		display: flex;
+		position: relative;
+		align-items: stretch;
+		
+		&:first-child {
+			&:after {
+				content: '';
+			}
+		}
+
+		&:after {
+			content: '\2022';
+			color: #fff;
+			font-size: rem(12px);
+			position: absolute;
+			top: 50%;
+			left: 15px;
+			transform: translate(0, -50%);
+		}
+	}
+
+	&__link {
+		display: flex;
+		position: relative;
+		align-items: center;
+		font-family: 'Ubuntu-Medium';
+		text-transform: uppercase;
+		color: #fff;
+		margin-left: 35px;
+		font-size: rem(13px);
+	}
+
+	@include tablets() {
+		display: none;
+	}
+}
+
+
+
+
+

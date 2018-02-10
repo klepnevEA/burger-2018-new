@@ -1,0 +1,126 @@
+.slider {
+	position: relative;
+	min-height: 475px;
+	width: 100%;
+	height: 50%;
+	
+	@include tablets() { 
+		height: 80%;
+		width: 80%;
+	}
+
+
+	&__list {
+		height: 100%;
+		overflow: hidden;
+	}
+
+	&__elem {
+		display: flex;
+		position: relative;
+		width: 100%;
+		height: 100%;
+		float: left;
+
+
+		@include tablets() { 
+			flex-direction: column; 
+			justify-content: center; 
+			align-items: center;
+		}		
+	}
+
+	&__col {
+		display: flex;
+		flex-direction: column; 
+		justify-content: space-between; 
+		float: left;
+		width: 50%;
+		height: 100%;
+		
+
+		@include tablets() { 
+			width: 80%;
+		}
+	}
+
+	&__img {
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 100% auto;  
+	}
+
+	&__text {
+		font-family: 'Ubuntu-Light';
+		font-size: rem(14px);
+		line-height: 2;
+		color: #fff;
+		text-align: left;
+		
+		@include tablets() { 
+			text-align: center;
+		}
+	}
+
+	&__info	{
+		display: flex;
+		
+		.btn {
+			align-self: flex-end;
+		}
+
+		@include tablets() { 
+			justify-content: center;
+		}
+	}
+
+	&__price {
+		color: $orange;
+		font-size: rem(30px);
+		font-family: 'Gagalin-Regular';
+		margin-right: 20px;
+		
+	}
+
+	&__price span {
+		color: $orange;
+		font-size: rem(30px);
+		font-family: 'Gagalin-Regular';
+		font-size: 3em;
+		line-height: 1; 
+	}
+
+	&__arrow {
+		position: absolute;
+		width: 30px;
+		height: 30px;
+		top: 50%;
+		transform: translate(0 , -50%);
+		z-index: 100;
+		
+		.soc__icon {
+			fill: #fff;
+		}
+		
+		&_left {
+			left: -30px;
+			right: auto;
+			
+			.soc__icon {
+				transform: rotate(90deg);
+			}
+		}
+
+		&_right {
+			left: auto;
+			right: -30px;
+			
+			.soc__icon {
+				transform: rotate(-90deg);
+			}
+		}		
+	}
+
+}

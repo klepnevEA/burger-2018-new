@@ -1,0 +1,59 @@
+.advantages {
+	
+	&__list {
+		display: flex;
+		
+			@include phones() { 
+				flex-direction: column; 
+				align-items: center;
+			}
+	}
+
+	&__elem {
+		flex: 1 1 auto;
+		
+		@include phones() { 
+			width: 80%;
+			margin-bottom: 20px; 
+		}
+	}
+
+	&__img {
+		height: 100px;
+		margin-bottom: 23px;
+	}
+	
+	&__icon {
+		width: 93px;
+		height: 90px;
+		
+		&_beef {
+			fill:#E35028;
+		}
+
+		&_hand {
+			fill: #F9B43B;
+		}
+
+		&_natural {
+			fill: #8BC03F;
+		}
+		
+	}
+
+	&__title {
+		font-family: 'Lifehack-Medium';
+		color: $black;
+		font-size: rem(24px);
+		margin-bottom: 20px;
+	}
+
+	&__text {
+		color: $black;
+		font-size: rem(14px);
+		font-family: 'Ubuntu-Light';
+		line-height: 1.8;
+		padding: 0 10px;
+	}
+}
+

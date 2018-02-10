@@ -1,0 +1,96 @@
+.reviews {
+	width: 100%;
+	height: 100%;
+	
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		align-content: space-around;
+		height: 100%;
+	}
+
+	&__elem {
+		position: relative;
+		width: 25%;
+		height: 50%;
+		
+
+		
+		&:hover {
+			.reviews {
+				&__photo {
+					filter: grayscale(100%) brightness(50%); 
+				}
+
+				&__info {
+					transform: scale(1,1);
+					opacity: 1;
+				}
+			}
+		}
+
+		@include tablets() { 
+			width: 50%;
+			height: 25%;
+		}
+	}
+
+	&__photo {
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center; 
+		filter: grayscale(100%) brightness(100%); 
+		transition: 0.5s;
+	}
+
+	&__info	{
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		padding: 45px 10%;
+		transform: scale(0.7,0.7);
+		opacity: 0;
+		transition: 0.5s;
+	}
+
+	&__title {
+		font-size: rem(14px);
+		font-family: 'Gagalin-Regular';
+		text-align: left;
+		color: #fff;
+		margin-bottom: 15px;	
+	}
+
+	&__text {
+		font-size: rem(14px);
+		font-family: 'Ubuntu-Light';
+		line-height: 2.4;
+		text-align: left;
+		color: #fff;
+		overflow: hidden;
+		max-height: calc(100% - 70px);
+		height: calc(100% - 70px);
+		margin-bottom: 10px;
+		
+	}
+
+	&-popups {
+		position: fixed;
+		display: flex;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background-color: rgba(47, 50, 52, 0.92);
+		z-index: 2000;
+		
+		&__window {
+			background-color: #FFF 
+		}
+	}
+}
+

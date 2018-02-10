@@ -1,0 +1,150 @@
+.order-form {
+	&__wrap {
+		display: flex;
+		margin: 0 -10px;
+		
+		@include tablets() { 
+			flex-direction: column;
+			width: 80%;
+			margin: 0 auto;
+		}
+
+		@include phones() { 
+			flex-direction: column;
+			width: 100%;
+			margin: 0 auto;
+		}
+	}
+
+	&__col {
+		width: 50%;
+		
+				@include tablets() { 
+			width: 100%;
+		}
+		
+	}
+
+	&__row {
+		display: flex;
+		
+		@include tablets() { 
+			justify-content: center;
+		}
+	}
+
+	&__lebel {
+		text-align: left;
+		font-family: 'Ubuntu-Light';
+		font-size: rem(14px);
+		color: #fff;
+		margin-bottom: 5px;
+	}
+
+	&__label-wrap {
+		padding: 0 10px;
+		flex: 1 1 auto;
+		margin-bottom: 15px;
+	}
+
+	&__input,
+	&__textarea {
+		width: 100%;
+		border-width: 1px;
+		border-color: rgb(209, 207, 203);
+		border-style: solid;
+		border-radius: 5px;	
+		padding: 8px; 
+		font-family: 'Ubuntu-Light';
+		font-size: rem(14px);
+		
+		&:focus {
+			border-color: $ellow;
+		}	
+	}
+
+	&__textarea  {
+		resize: none;
+		height: 110px;
+	}
+
+	&__radio-elem {
+		position: absolute;
+		opacity: 0; 
+	}
+
+	&__radio {
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		text-align: left;
+		padding: 0 10px;
+		margin-bottom: 15px;
+	}
+
+	&__radio-elem + .order-form__radio-fake {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 15px;
+		height: 15px;
+		margin-right: 15px;
+		border-radius: 50%;
+		background-color: #fff;  
+		
+		&:after {
+			content: '';
+			opacity: 0;
+			width: 7px;
+			height: 7px;
+			border-radius: 50%;
+			background-color: $orange;
+			transition: .3s;
+			
+		}
+
+	}
+
+	&__radio-elem:checked  + .order-form__radio-fake {
+		&:after {
+			opacity: 1;
+		}
+	}
+
+	&__radio-title {
+		color: #fff;
+		font-family: 'Ubuntu-Light';
+		font-size: rem(14px);
+	}
+
+	&__radio_checkbox .order-form__radio-elem + .order-form__radio-fake{
+		border-radius: 0px;
+
+		&:after {
+			content: '';
+			color: $orange;
+			background: url(../img/icons/check.svg); 
+			background-size: 70%; 
+			background-position: center;
+			background-repeat: no-repeat;
+			width: 100%;
+			height: 100%;
+			background-color: #fff;  
+			opacity: 0;
+			position: relative;
+		}
+
+	}
+
+	&__radio_checkbox .order-form__radio-elem:checked + .order-form__radio-fake{
+		&:after {
+			opacity: 1;
+		}
+	}
+
+	&__btn-group {
+		padding: 0 10px;
+	}
+}
+
+

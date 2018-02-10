@@ -1,0 +1,42 @@
+.title {
+	line-height: 1.2;
+	margin-bottom: 20px;
+	color: $ellow;
+	font-size: rem(72px);
+	font-family: 'Gagalin-Regular';
+	text-transform: uppercase;
+	
+	&_center {
+		text-align: center;
+	}
+
+	&_left {
+		text-align: left;
+	}
+
+	&_white {
+		color: #fff;
+	}
+
+	&_black {
+		color: $black;
+	}
+
+	&_mb-20 {
+		margin-bottom: 20px;
+	}
+
+	&_slider {
+		color: #fff;
+		text-align: left;
+		line-height: 1;
+		margin-bottom: 10px;
+		
+		@include tablets() { 
+			text-align: center;
+		}
+	}
+}
+
+
+

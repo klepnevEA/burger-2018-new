@@ -1,0 +1,126 @@
+.team {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	padding: 114px 95px;
+	width: 50%;
+	background-color: rgba(31,33,34,0.93);
+	text-align: left;
+	
+			@include tablets() { 
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+	
+	&__elem {
+		margin-bottom: 20px;
+		
+		&_active {
+			.team {
+				&__drop {
+					max-height: 300px; 
+				}
+
+				&__name {
+					color: $ellow;
+				}
+
+				&__triangle {
+					transform: rotate(-180deg);
+				}
+			}
+		}
+	}
+	
+	
+	&__btn {
+		display: flex;
+		align-items: center;
+		padding-bottom: 10px;
+		
+		@include tablets() { 
+			justify-content: center;
+		}
+		
+	}
+	
+	&__triangle {
+		width: 0;
+		height: 0;
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-top: 7px solid $ellow;
+		box-sizing: content-box; 
+		margin-right: 10px;
+	}
+
+	&__name {
+		font-family: 'Gagalin-Regular';
+		font-size: rem(14px);
+		color: #fff;
+	}
+
+	&__drop {
+		display: flex;
+		max-height: 0;
+		overflow: hidden;
+		padding: 0 15px;
+		transition: 0.3s;
+		
+		@include tablets() { 
+			flex-direction: column; 
+			align-items: center;
+		}
+	}
+
+	&__img {
+		width: 100px;
+		height: 100px;
+		border-radius: 50%; 
+		background-position: center;
+		background-size: cover; 
+		margin-right: 20px;
+		margin-top: 3px;
+		flex: 1 0 auto;
+		
+		@include tablets() { 
+			margin-right: 0;
+			margin-bottom: 20px;
+		}
+
+	}
+
+	&__info {
+		width: calc(100% - 120px); 
+		
+		@include tablets() { 
+			text-align: center;
+			width: 100%;
+		}	
+	}
+
+	&__position {
+		color: #fff;
+		font-family: 'Ubuntu-Bold';
+		margin-bottom: 10px;
+	}
+
+	&__text {
+		color: #fff;
+		font-family: 'Ubuntu-Light';
+		line-height: 1.5;
+	}
+
+	@include tablets() { 
+		width: 100%;
+		
+		.title {
+			text-align: center;
+		}
+	}
+}
+
+
+

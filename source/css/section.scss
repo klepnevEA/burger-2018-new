@@ -1,0 +1,88 @@
+.section {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	min-height: 650px;
+	background-size: cover;
+	background-repeat: no-repeat; 
+	background-position:  center; 
+	
+	@include phones() { 
+		min-height: 100vh;
+	}
+	
+	&__container {
+		margin: 0 auto;
+		max-width: 960px;
+		width: 100%;
+		padding: 0 10px; 
+		
+		&_advantages,
+		&_order,
+		&_slider {
+			display: flex;
+			justify-content: center; 
+			align-items: center;
+			height: 100%;
+		}
+	}
+	
+	&_burger {
+		position: relative;
+		background-image: url('../img/bg/first-screen.jpg');
+		
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-repeat: repeat;
+			background-image: url('../img/bg/first-screen-texture.png');  
+		}
+	}
+
+	&_advantages
+	{
+		background-image: url('../img/bg/bg.jpg');
+		
+		&:after {
+			content: '';
+			display: inline-block;
+			vertical-align: middle;
+			height: 100%;
+		}
+	}
+
+	&_team {
+		background-image: url('../img/bg/SBS_1255-X2.jpg'); 
+	}
+
+	&_menu {
+		background-image: url('../img/bg/menu.jpg');
+		padding: 80px; 
+	}
+
+	&_order {
+		background-image: url('../img/bg/order.jpg');
+		
+		&:after {
+			content: '';
+			display: inline-block;
+			vertical-align: middle;
+			height: 100%;
+		}
+	}
+
+	&_slider {
+		background: #f9b43b; 
+		background: -moz-linear-gradient(top, #f9b43b 0%, #eb8d38 50%, #f9b43b 100%); 
+		background: -webkit-linear-gradient(top, #f9b43b 0%,#eb8d38 50%,#f9b43b 100%); 
+		background: linear-gradient(to bottom, #f9b43b 0%,#eb8d38 50%,#f9b43b 100%); 
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9b43b', endColorstr='#f9b43b',GradientType=0 ); 	
+
+	}
+}
+
+

@@ -1,0 +1,32 @@
+.btn-nav-mobile {
+	display: none;
+	position: relative;
+	z-index: 900;
+	width: 25px;
+	height: 25px;
+	margin-left: 20px;
+	margin-right: 2vw;
+
+	&__btn {
+		display: flex;
+		position: relative;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: stretch; 
+		width: 100%;
+		height: 100%;
+
+		z-index: 1000;
+	}
+
+	&__btn-decor {
+		display: inline-block;
+		height: 3px;
+		border-radius: 3px; 
+		background-color: #fff; 
+	}
+
+	@include tablets() {
+		display: block;
+	}
+}
