@@ -6,6 +6,10 @@ $(document).ready(function() {
 
     });
 
+    $('#fullpage').fullpage({
+        anchors: ['section_burger', 'section_advantages', 'section_reviews', 'section_slider', 'section_team', 'section_menu', 'section_order', 'section_map'],
+        menu: '#myMenu'
+    });
     
 
     // карта 
@@ -90,25 +94,7 @@ $(document).ready(function() {
     var navMobileBtnOpen = document.querySelector("#btn-nav-mobile__btn");
     var navMobileBtnClose = document.querySelector("#nav-mobile__close");
     var navMobile = document.querySelector(".nav-mobile");
-
-    
-
-    var navMobileArr = ['О нас', 'Бургеры', 'Команда', 'Меню', 'Отзывы', 'Контакты'];
-    var navMobileList = document.querySelector("#nav-mobile__list");
-    
-    for (var i = 0; i < navMobileArr.length ; i++) {
-
-        var liElem = document.createElement('li');
-        liElem.classList.add('nav-mobile__elem');
-        
-        var linkElem = document.createElement('a');
-        linkElem.href = '#';
-        linkElem.textContent = navMobileArr[i];
-        linkElem.classList.add('nav-mobile__link');
-
-        liElem.appendChild(linkElem);
-        navMobileList.appendChild(liElem);
-    };
+    var navMobileBtnlink = document.querySelectorAll(".nav-mobile__link");
 
 
     navMobileBtnOpen.addEventListener('click', function () {
@@ -120,6 +106,13 @@ $(document).ready(function() {
         event.preventDefault();
         navMobile.classList.remove('nav-mobile_active');
     }); 
+
+    for (let i = 0; i < navMobileBtnlink.length; i++) {
+        navMobileBtnlink[i].addEventListener("click", function(e) {
+            navMobile.classList.remove('nav-mobile_active');
+        });
+    };
+
 
 
     // аккордеон команда

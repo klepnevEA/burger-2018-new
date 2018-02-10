@@ -13,6 +13,8 @@
     </script>
 	<script src="../scripts/jquery-3.2.1.min.js"></script>
 	<script src="../scripts/jquery.dotdotdot.js"></script>
+	<script src="../scripts/jquery.fullpage.min.js"></script>
+	
 	<script src="../scripts/scripts.js"></script>
 	<link href="css/style.css" rel="stylesheet">
 
@@ -23,9 +25,9 @@
 <body>
 
 	<div class="wrapper"> 
-		<div class="container">
+		<div class="container" id="fullpage">
 			
-			<section class="section section_burger">
+			<section class="section section_burger" data-anchor="section_burger">
 				<div class="section__container">
 					<header class="header">
 						<a href="#" class="logo">
@@ -34,38 +36,38 @@
 						<nav class="nav">
 							<ul class="nav__list">
 								<li class="nav__elem">
-									<a href="#" class="nav__link">
+									<a href="#section_advantages" class="nav__link">
 										О нас 
 									</a>
 								</li>
 								<li class="nav__elem">
-									<a href="#" class="nav__link">
+									<a href="#section_slider" class="nav__link">
 										Бургеры 
 									</a>
 								</li>
 								<li class="nav__elem">
-									<a href="#" class="nav__link">
+									<a href="#section_team" class="nav__link">
 										Команда 
 									</a>
 								</li>
 								<li class="nav__elem">
-									<a href="#" class="nav__link">
+									<a href="#section_menu" class="nav__link">
 										Меню 
 									</a>
 								</li>
 								<li class="nav__elem">
-									<a href="#" class="nav__link">
+									<a href="#section_reviews" class="nav__link">
 										Отзывы
 									</a>
 								</li>
 								<li class="nav__elem">
-									<a href="#" class="nav__link">
+									<a href="#section_map" class="nav__link">
 										Контакты 
 									</a>
 								</li>
 							</ul>
 						</nav>
-						<button class="btn">Заказать</button>
+						<a href="#section_order" class="btn">Заказать</a>
 						<div class="btn-nav-mobile">
 							<a href="#" class="btn-nav-mobile__btn" id='btn-nav-mobile__btn'>
 								<span class="btn-nav-mobile__btn-decor"></span>
@@ -85,7 +87,7 @@
 						</div>
 					</div>
 
-					<a href="#" class="arrow-down">
+					<a href="#section_advantages" class="arrow-down">
 						<img class="arrow-down__img" src="./img/icons/arrow-scroll.svg" alt="arrow-scroll" />
 					</a>
 				</div>
@@ -94,7 +96,7 @@
 
 
 			
-<section class="section section_advantages">
+<section class="section section_advantages"  data-anchor="section_advantages">
 	<div class="section__container section__container_advantages">
 
 		
@@ -138,7 +140,7 @@
 
 
 			
-<section class="section">
+<section class="section" data-anchor="section_reviews">
 	<div class="reviews">
 		<ul class="reviews__list">
 			<li class="reviews__elem">
@@ -212,7 +214,7 @@
 
 
 			
-<section class="section section_slider">
+<section class="section section_slider"  data-anchor="section_slider">
 	<div class="section__container section__container_slider">
 		<div class="slider">
 			<a href="#" class="slider__arrow slider__arrow_left">
@@ -301,7 +303,7 @@
 
 
 			
-<section class="section section_team">
+<section class="section section_team" data-anchor="section_team">
 	<div class="team">
 		<div class="title title_left">команда</div>
 		<ul class="team__list">
@@ -363,7 +365,7 @@
 
 
 			
-<section class="section section_menu">
+<section class="section section_menu" data-anchor="section_menu">
 	<div class="title title_left title_white">меню</div>
 	<div class="accordion-menu">
 		<ul class="accordion-menu__list accordion-menu__list_active">
@@ -428,7 +430,7 @@
 
 
 			
-<section class="section section_order">
+<section class="section section_order" data-anchor="section_order">
 	<div class="section__container section__container_order">
 		<form action="" class="order-form">
 			<div class="title">Закажите доставку</div>
@@ -511,7 +513,7 @@
 
 
 			
-<section class="section">
+<section class="section" data-anchor="section_map">
 	<div id="map" class="map"></div>
 	<footer class="footer">
 		<div class="footer__container">
@@ -569,37 +571,37 @@
 	</div>
 
 		<div class="navigation">
-		<ul class="navigation__list">
-			<li class="navigation__elem">
-				<a href="#" class="navigation__link navigation__link_active">
+		<ul class="navigation__list" id="myMenu">
+			<li class="navigation__elem" data-menuanchor="section_burger">
+				<a href="#section_burger" class="navigation__link navigation__link_active">
 				</a>
 			</li>
-			<li class="navigation__elem">
-				<a href="#" class="navigation__link">
+			<li class="navigation__elem" data-menuanchor="section_advantages" >
+				<a href="#section_advantages" class="navigation__link">
 				</a>
 			</li>
-			<li class="navigation__elem">
-				<a href="#" class="navigation__link">
+			<li class="navigation__elem" data-menuanchor="section_reviews" >
+				<a href="#section_reviews" class="navigation__link">
 				</a>
 			</li>
-			<li class="navigation__elem">
-				<a href="#" class="navigation__link">
+			<li class="navigation__elem" data-menuanchor="section_slider" >
+				<a href="#section_slider" class="navigation__link">
 				</a>
 			</li>
-			<li class="navigation__elem">
-				<a href="#" class="navigation__link">
+			<li class="navigation__elem" data-menuanchor="section_team" >
+				<a href="#section_team" class="navigation__link">
 				</a>
 			</li>
-			<li class="navigation__elem">
-				<a href="#" class="navigation__link">
+			<li class="navigation__elem" data-menuanchor="section_menu" >
+				<a href="#section_menu" class="navigation__link">
 				</a>
 			</li>
-			<li class="navigation__elem">
-				<a href="#" class="navigation__link">
+			<li class="navigation__elem" data-menuanchor="section_order" >
+				<a href="#section_order" class="navigation__link">
 				</a>
 			</li>
-			<li class="navigation__elem">
-				<a href="#" class="navigation__link">
+			<li class="navigation__elem" data-menuanchor="section_map" >
+				<a href="#section_map" class="navigation__link">
 				</a>
 			</li>
 		</ul>
@@ -613,24 +615,24 @@
 		<i class="icon-close"></i>
 	</a>
 	<ul class="nav-mobile__list" id="nav-mobile__list">
-		<!-- <li class="nav-mobile__elem">
-			<a href="#" class="nav-mobile__link">О нас</a>
+		<li class="nav-mobile__elem">
+			<a href="#section_advantages" class="nav-mobile__link">О нас</a>
 		</li>
 		<li class="nav-mobile__elem">
-			<a href="#" class="nav-mobile__link">Бургеры</a>
+			<a href="#section_slider" class="nav-mobile__link">Бургеры</a>
 		</li>
 		<li class="nav-mobile__elem">
-			<a href="#" class="nav-mobile__link">Команда</a>
+			<a href="#section_team" class="nav-mobile__link">Команда</a>
 		</li>
 		<li class="nav-mobile__elem">
-			<a href="#" class="nav-mobile__link">Меню</a>
+			<a href="#section_menu" class="nav-mobile__link">Меню</a>
 		</li>
 		<li class="nav-mobile__elem">
-			<a href="#" class="nav-mobile__link">Отзывы</a>
+			<a href="#section_reviews" class="nav-mobile__link">Отзывы</a>
 		</li>
 		<li class="nav-mobile__elem">
-			<a href="#" class="nav-mobile__link">Контакты</a>
-		</li> -->
+			<a href="#section_map" class="nav-mobile__link">Контакты</a>
+		</li>
 	</ul>
 </nav>
 
